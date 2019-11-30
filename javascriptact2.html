@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title> JavaScript, jQuery, and HTML  </title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+
+
+
+  <div data-role="page">
+
+  <p>Project Module 04</p>
+
+  <button class="ui-btn" onclick="myFunction()">Press me please ;)</button>
+
+      <script>
+
+function promptLogin( )
+{
+
+var name = prompt ("Enter your Username: ");
+
+while (name != 'crayson'){
+alert("Username is incorrect");
+name = prompt ("Enter your Username: ");
+}
+
+var pwd = prompt ("Enter your Password: ");
+
+while (pwd != '1234'){
+alert("Password is incorrect");
+pwd = prompt ("Enter your Password: ");
+}
+
+
+document.write("<br>Username: " + name);
+document.write("<br> Password: " + pwd);
+
+}
+promptLogin();
+
+
+      var inputstr=prompt("Please enter string")
+      document.write("<br> The string you entered is " + inputstr);
+      $(document).ready(function() {
+
+        $("button").click(function() {
+$("div").animate({left: '1250px'}).hide(2000).show(2000).fadeOut("slow");
+$("#div2").fadeOut("slow");
+          var x = $("input:text").val();
+
+            document.getElementById("project").innerHTML = x;
+
+
+            });
+          });
+      </script>
+</div><br>
+<div style="background:#98bf21;height:100px;width:100px;position:absolute;"></div><br>
+
+<div id="div2" style="width:100px;height:100px;background-color:black;"></div><br>
+
+
+
+
+</body>
+</html>
