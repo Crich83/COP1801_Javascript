@@ -1,0 +1,31 @@
+<html>
+<SCRIPT>
+
+function display()
+{
+var x=document.details.fname.value;
+var y=document.details.lname.value;
+var z=document.details.addy.value;
+var a=document.details.city.value;
+var b=document.details.state.value;
+document.write("First name: <br>" + x);
+document.write("<br>Last name:<br> " + y);
+document.write("<br>Address:<br> " + z);
+document.write("<br>City:<br> " + a);
+document.write("<br>State:<br> " + b);
+}
+
+</SCRIPT>
+<body>
+<form name=details>
+<table>
+ <tr><td>ENTER  FRIST NAME:<input type=text  name=fname></td></tr>
+ <tr><td>ENTER  LAST  NAME:<input type=text  name=lname></td></tr>
+ <tr><td>ENTER  ADDRESS:<input type=text  name=addy></td></tr>
+ <tr><td>ENTER  CITY:<input type=text  name=city></td></tr>
+ <tr><td>ENTER  STATE:<input type=text  name=state></td></tr>
+</table>
+<input type="button" value="Click Me" onclick="display();">
+ </form>
+</body>
+</html>
