@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Module 6 Project</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <style>
+            table tr:not(:first-child){
+                cursor: pointer;transition: all .25s ease-in-out;
+            }
+            table tr:not(:first-child):hover{background-color: #ddd; font-weight:bold; color:red}
+        </style>
+        
+    </head>
+    <body>
+       
+        First Name:<input type="text" name="fname" id="fname"><br><br>
+        Last Name:<input type="text" name="lname" id="lname"><br><br>
+        Address:<input type="text" name="addy" id="addy"><br><br>
+	City:<input type="text" name="city" id="city"><br><br>
+	State:<input type="text" name="state" id="state"><br><br>
+        
+        <table id="table" border="1">
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Address</th>
+                 <th>City</th>
+                 <th>State</th>
+            </tr>
+            
+            <tr>
+                <td>Crayson</td>
+                <td>Richardson</td>
+                <td>333 Green Lane</td>
+		<td>High Point</td>
+		<td>N.C.</td>
+            </tr>
+            
+            <tr>
+                <td>Crayson</td>
+                <td>Richardson</td>
+                <td>333 Green Lane</td>
+		<td>High Point</td>
+		<td>N.C.</td>
+            </tr>
+            
+            <tr>
+                <td>Crayson</td>
+                <td>Richardson</td>
+                <td>333 Green Lane</td>
+		<td>High Point</td>
+		<td>N.C.</td>
+            </tr>
+            
+            <tr>
+                <td>Crayson</td>
+                <td>Richardson</td>
+                <td>333 Green Lane</td>
+		      <td>High Point</td>
+		<td>N.C.</td>
+            </tr>
+            
+            <tr>
+                <td>Crayson</td>
+                <td>Richardson</td>
+                <td>333 Green Lane</td>
+		<td>High Point</td>
+		<td>N.C.</td>
+            </tr>
+        </table>
+        
+        <script>
+    
+                var table = document.getElementById('table');
+                
+                for(var i = 1; i < table.rows.length; i++)
+                {
+                    table.rows[i].onclick = function()
+                    {
+                         //rIndex = this.rowIndex;
+                         document.getElementById("fname").value = this.cells[0].innerHTML;
+                         document.getElementById("lname").value = this.cells[1].innerHTML;
+                         document.getElementById("addy").value = this.cells[2].innerHTML;
+                         document.getElementById("city").value = this.cells[3].innerHTML;
+                         document.getElementById("state").value = this.cells[4].innerHTML;
+                    };
+                }
+    
+         </script>
+        
+    </body>
+</html>
